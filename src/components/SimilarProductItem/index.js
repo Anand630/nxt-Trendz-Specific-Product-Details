@@ -1,26 +1,31 @@
 import {Link} from 'react-router-dom'
+
 import './index.css'
 
 const SimilarProductItem = props => {
   const {productDetails} = props
   const {
-    availability,
     brand,
-    description,
+
     id,
     imageUrl,
     price,
     rating,
-    style,
+
     title,
-    totalReviews,
   } = productDetails
+
+  //   const onSimilarProductClick = () => {
+  //     const {history} = props
+  //     history.replace(`/products/${id}`)
+  //   }
+
   return (
     <li className="similar-product-item">
       <Link to={`/products/${id}`} className="similar-product-card-link">
         <img
           src={imageUrl}
-          alt="product"
+          alt={`similar product ${title}`}
           className="similar-product-thumbnail"
         />
         <h1 className="similar-product-title">{title}</h1>

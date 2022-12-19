@@ -38,15 +38,16 @@
   .product-image-details-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
   .product-image {
     border-radius: 10px;
-    width: 380px;
+    max-width: 400px;
+    width: 100%;
   }
 
   .product-details-container {
     margin-left: 35px;
+    margin-left: 0;
     width: 100%;
   }
 }
@@ -120,11 +121,20 @@
   line-height: 1.5;
 }
 
+.question-answer-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .question-parameter {
   font-family: Roboto;
   color: #12022f;
   font-size: 17px;
   font-weight: 500;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  margin-top: 8px;
 }
 
 .answer-parameter {
@@ -132,6 +142,8 @@
   color: #616e7c;
   font-size: 16px;
   font-weight: 400;
+  margin-top: 8px;
+  margin-bottom: 2px;
 }
 
 .horizontal-line {
@@ -198,4 +210,71 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* failure view styling */
+
+.failure-view-container {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.failure-view-image {
+  width: 550px;
+}
+
+@media (max-width: 700px) {
+  .failure-view-image {
+    width: 450px;
+  }
+}
+
+@media (max-width: 520px) {
+  .failure-view-image {
+    width: 100%;
+  }
+}
+
+.product-not-found-text {
+  font-family: Roboto;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+@media (max-width: 575px) {
+  .product-not-found-text {
+    font-family: Roboto;
+    font-weight: 500;
+    color: #1e293b;
+    font-size: 28px;
+  }
+}
+
+.continue-shopping-button {
+  background-color: #3b82f6;
+  font-family: Roboto;
+  font-weight: 400;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
